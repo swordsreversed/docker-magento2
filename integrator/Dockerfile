@@ -46,7 +46,7 @@ COPY ./install-sampledata /usr/local/bin/install-sampledata
 RUN chmod +x /usr/local/bin/install-sampledata
 
 RUN a2enmod rewrite
-RUN echo "memory_limit=2048M" > /usr/local/etc/php/conf.d/memory-limit.ini
+RUN echo "memory_limit=768M" > /usr/local/etc/php/conf.d/memory-limit.ini
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
